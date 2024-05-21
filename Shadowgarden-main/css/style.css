@@ -1,0 +1,451 @@
+/* Hier word de hele pagina mooi gemaakt */
+* {
+  margin: 0;
+  padding: 0;
+  font-family: Arial, Helvetica, sans-serif;
+  overflow: hidden;
+  user-select: none;
+}
+
+/* Hier zijn de roots om de kleuren makkelijker te maken */
+:root {
+  font-size: 16px;
+  font-family: 'Open Sans';
+  --text-primary: #b6b6b6;
+  --text-secondary: #ececec;
+  --bg-primary: #23232e;
+  --bg-secondary: #141418;
+  --transition-speed: 600ms;
+
+}
+
+/* Hier word de body van het pagina's mooi gemaakt */
+body {
+  color: black;
+  background-color: white;
+  margin: 0;
+  padding: 0;
+}
+
+/* Hier word de scrollbar gemaakt voor het telefoon mode van het website */
+body::-webkit-scrollbar {
+  width: 0.25rem;
+}
+
+/* Hier word de scrollbar gemaakt voor het telefoon mode van het website */
+body::-webkit-scrollbar-track {
+  background: #1e1e24;
+}
+
+/* Hier word de scrollbar gemaakt voor het telefoon mode van het website */
+body::-webkit-scrollbar-thumb {
+  background: #6649b8;
+}
+
+/* Hier word de scrollbar gemaakt/mooi gemaakt */
+.navbar {
+  position: fixed;
+  background-color: var(--bg-primary);
+  transition: width 600ms ease;
+  overflow: auto;
+}
+
+/* Hier word de nav een column zodat alles mooi onder elkaar ligt */
+.navbar-nav {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  height: 100%;
+
+}
+
+/* Hier zijn de items/icons van het navbar mooi gemaakt */
+.nav-item {
+  width: 100%;
+}
+
+/* Hier zijn de items/icons van het navbar mooi gemaakt */
+.nav-item:last-child {
+  margin-top: auto;
+}
+
+/* Hier word de kleur van het navbar gemaakt en aangepast */
+.nav-link {
+  display: flex;
+  align-items: center;
+  height: 5rem;
+  color: var(--text-primary);
+  text-decoration: none;
+  filter: grayscale(100%) opacity(0.7);
+  transition: var(--transition-speed);
+}
+
+/* Hier heb je de hover animatie van het icons en navbar */
+.nav-link:hover {
+  filter: grayscale(0%) opacity(1);
+  background: var(--bg-secondary);
+  color: var(--text-secondary);
+}
+
+/* Hier is de text van het navbar gemaakt */
+.link-text {
+  display: none;
+  margin-left: 1rem;
+}
+
+/* Hier zijn de icons mooi gemaakt en verplaatst */
+.nav-link svg {
+  width: 2rem;
+  min-width: 2rem;
+  margin: 0 1.5rem;
+}
+
+/* Hier zijn de icons mooi gemaakt en verplaatst */
+.fa-primary {
+  color: #96BAF7;
+}
+
+/* Hier zijn de icons mooi gemaakt en verplaatst */
+.fa-secondary {
+  color: #719FEB;
+}
+
+/* Hier zijn de icons mooi gemaakt en verplaatst */
+.fa-primary,
+.fa-secondary {
+  transition: var(--transition-speed);
+}
+
+/* Hier zijn de icons mooi gemaakt en verplaatst */
+.logo {
+  font-weight: bold;
+  text-transform: uppercase;
+  margin-bottom: 1rem;
+  text-align: center;
+  color: var(--text-secondary);
+  background: var(--bg-secondary);
+  font-size: 1.5rem;
+  letter-spacing: 0.3ch;
+  width: 100%;
+}
+
+/* Hier zijn de icons mooi gemaakt en verplaatst */
+.logo svg {
+  transform: rotate(0deg);
+  transition: var(--transition-speed);
+}
+
+/* Hier is de text van het logo mooi gemaakt */
+.logo-text
+{
+  display: inline;
+  position: absolute;
+  left: -999px;
+  transition: var(--transition-speed);
+}
+
+/* Hier is de hover animatie van het logo in het navbar */
+.navbar:hover .logo svg {
+  transform: rotate(-180deg);
+}
+
+
+/* Hier is de container van het pizza clicker mooi gemaakt en op plek gezet */
+.container {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  gap: 50px;
+  padding: 20px 0;
+}
+
+/* Hier is de score van het clicks mooi gemaakt */
+.score {
+  font-size: 4rem;
+  font-weight: bold;
+  text-shadow: 0 0 10px #000;
+  width: 100%;
+  text-align: center;
+  color: white;
+  background-color: rgba(0, 0, 0, .4);
+
+}
+
+/* Hier is het pizza containter op plek gezet */
+.pizza-container {
+  height: 320px;
+}
+
+/* Hier word de pizza mooi gemaakt */
+.pizza {
+  width: 300px;
+  cursor: pointer;
+  filter: drop-shadow(0 0 2px white);
+  animation: rotates 100s linear infinite;
+}
+
+/* Hier kan de pizza bewegen */
+.pizza:active {
+  width: 280px;
+
+}
+
+/* Hier zijn de kleine particles die uit het pizza komen na het klikken  */
+.pizza-particle {
+  width: 30px;
+  position: absolute;
+  top: -30px;
+  left: -30px;
+  pointer-events: none;
+  animation: pizza-up 3s linear forwards;
+}
+
+/* Hier worden de powerups mooi gemaakt */
+.powerups {
+  width: 100%;
+  height: 200px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: rgba(0, 0, 0, .4);
+  margin-bottom: 20px;
+  gap: 50px;
+}
+
+/* Hier word 1 van de powerups mooi gemaakt en werkend */
+.powerup {
+  width: 150px;
+  height: 160px;
+  border: 2px solid;
+  cursor: pointer;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+  border-radius: 10px;
+  background-color: #fff;
+}
+
+/* Hier is een klein animatie van het powerup */
+.powerup:active {
+  transform: scale(.9);
+}
+
+/* Hier is een klein animatie van het powerup */
+.powerup .name {
+  font-size: 1.3rem;
+  font-weight: bold;
+}
+
+/* Hier is een prijs mooi gemaakt van het powerup */
+.powerup .price {
+  font-size: 1.1rem;
+  color: rgb(31, 181, 41);
+}
+
+/* Hier is een nieuw powerup mooi gemaakt */
+.chef .auto-click {
+  width: 80px;
+  transform: rotate(28deg);
+  padding-top: 10px;
+
+}
+
+/* hier is het animatie gemaakt wanner je geen geld hebt om de powerup te kopen */
+.invalid {
+  border: 2px solid red;
+  animation: error .3s linear infinite;
+}
+
+/* Hier word de disable gemaakt */
+.disable {
+  display: none;
+}
+
+/* Hier word de tekst van het auto clicks gemaakt */
+.auto-clicks h2 {
+  font-size: 2rem;
+  font-weight: bold;
+  text-shadow: 0 0 10px #000;
+  text-align: center;
+  color: white;
+  padding: 10px 0;
+}
+
+/* Hier word de auto click op plek gezet  */
+.auto-clicks {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  overflow-y: visible;
+  background-color: rgba(0, 0, 0, .4);
+  width: 100%;
+}
+
+/* Hier krijgt de plaatje een animatie */
+.chef.auto {
+  animation: clickEffect .5s ease alternate infinite;
+}
+
+/* Hier is hoe de plaatje breid moet zijn */
+.chef {
+  width: 80px;
+
+}
+
+/* Hier zijn de Keyframes gemaakt (Door keyframes kun je de animaties maken)*/
+
+@keyframes rotates {
+  from {
+    transform: rotate(0);
+  }
+
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+/* Hier zijn de Keyframes gemaakt (Door keyframes kun je de animaties maken)*/
+@keyframes pizza-up {
+  from {
+    opacity: 1;
+  }
+
+  to {
+    opacity: 0;
+    top: 0;
+  }
+}
+
+/* Hier zijn de Keyframes gemaakt (Door keyframes kun je de animaties maken)*/
+@keyframes clickEffect {
+  to {
+    transform: rotate(28deg) scale(.8);
+  }
+
+  from {
+    transform: rotate(28deg) scale(.7);
+  }
+}
+
+/* Hier zijn de Keyframes gemaakt (Door keyframes kun je de animaties maken)*/
+@keyframes error {
+  20% {
+    transform: translateX(10px);
+  }
+
+  40% {
+    transform: translateX(0);
+  }
+
+  60% {
+    transform: translateX(-10px);
+  }
+
+  80% {
+    transform: translateX(0);
+  }
+
+  100% {
+    transform: translateX(10px);
+  }
+}
+
+/* Kleine schermen */
+@media only screen and (max-width: 600px) {
+  .navbar {
+    bottom: 0;
+    width: 100vw;
+    height: 5rem;
+  }
+
+  .logo {
+    display: none;
+  }
+
+  .navbar-nav {
+    flex-direction: row;
+  }
+
+  .nav-link {
+    justify-content: center;
+  }
+
+  main {
+    margin: 0;
+  }
+}
+
+/* Grote schermen */
+@media only screen and (min-width: 600px) {
+  .navbar {
+    top: 0;
+    width: 5rem;
+    height: 100vh;
+  }
+
+  .navbar:hover {
+    width: 16rem;
+  }
+
+  .navbar:hover .link-text {
+    display: inline;
+  }
+
+  .navbar:hover .logo svg {
+    margin-left: 11rem;
+  }
+
+  .navbar:hover .logo-text {
+    left: 0px;
+  }
+}
+
+/* Hier worden de kleuren gemaakt van al de themas die er zijn */
+.dark {
+  --text-primary: #b6b6b6;
+  --text-secondary: #ececec;
+  --bg-primary: #23232e;
+  --bg-secondary: #141418;
+}
+
+/* Hier worden de kleuren gemaakt van al de themas die er zijn */
+.light {
+  --text-primary: #1f1f1f;
+  --text-secondary: #000000;
+  --bg-primary: #ffffff;
+  --bg-secondary: #e4e4e4;
+}
+
+/* Hier worden de kleuren gemaakt van al de themas die er zijn */
+.solar {
+  --text-primary: #576e75;
+  --text-secondary: #35535c;
+  --bg-primary: #fdf6e3;
+  --bg-secondary: #f5e5b8;
+}
+
+/* Hier worden de displays gemaakt van al de themas die er zijn */
+.theme-icon {
+  display: none;
+}
+
+/* Hier worden de displays gemaakt van al de themas die er zijn */
+.dark #darkIcon {
+  display: block;
+}
+
+/* Hier worden de displays gemaakt van al de themas die er zijn */
+.light #lightIcon {
+  display: block;
+}
+
+/* Hier worden de displays gemaakt van al de themas die er zijn */
+.solar #solarIcon {
+  display: block;
+}

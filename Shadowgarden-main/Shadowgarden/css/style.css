@@ -1,0 +1,169 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+  }
+
+  
+  
+  .column {
+    float: left;
+    width: 33.33%;
+    padding: 10px;
+    height: 100vh; 
+  }
+
+  .pizzalogo{
+    
+    height: 125px;
+  }
+
+  #pizzalogo {
+    align-items: center;
+  }
+  
+  .row:after {
+    content: "";
+    display: table;
+    clear: both;
+  }
+  
+  @media screen and (max-width: 600px) {
+    .column {
+      width: 100%;
+    }
+  }
+
+  .center{
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 400px;
+    height: 400px;
+  }
+
+.center-vert {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+}
+/* balk aantal pizza's */
+.amount {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 350px;
+  height: 100px; 
+  background: rgba(0,0,0,0.7); 
+}
+/* balk achievement unlocked */
+.achievement-pop-up {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  position: relative;
+  bottom: -581px;
+  width: 350px;
+  height: 100px;
+  background-color: tomato;
+}
+
+.sluit-achievement {
+  display: block;
+  margin-left: auto;
+  position: relative;
+  bottom: 65px;
+  left: -2px;
+  width: 10px;
+  height: 10px;
+  background-color: darkred
+}
+
+/* lijn tussen dingen */
+.groene-lijn {
+  display: block;
+  margin-left: auto;
+  width: 10px;
+  height: 100%;
+  position: absolute;
+  left: 33%;
+  background-color: chartreuse;
+}
+
+.groene-lijn2 {
+  display: block;
+  margin-left: 5px;
+  margin-top: -10px;
+  width: 10px;
+  height: 100%;
+  position: absolute;
+  left: 66%;
+  background-color: chartreuse;
+}
+
+/* achievements pagina */
+
+.column-2 {
+  float: left;
+  width: 66.66%;
+  padding: 10px;
+  height: 100vh; 
+}
+
+.achievement {
+  display: block;
+  padding: auto;
+  position: relative;
+  left: 2px;
+  width: 700px;
+  height: 150px;
+  background-color: white;
+}
+
+.achievement-foto {
+  display: block;
+  position: relative;
+  top: -74px;
+  right: -550px;
+}
+
+.items {
+  text-align:center;
+  display: inline;
+  border-style: solid;
+  width: 65vh;
+}
+
+.itemfoto {
+  float: left;
+}
+
+.upgrade {
+  border-style: solid;
+  display: inline-block;
+}
+
+/* header */
+.pizzalogo {
+  text-align: center;
+  
+}
+
+ /*footer  */
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Press Start 2P', Algerian;
+  background-color: #000;
+  color: #fff;
+  text-align: center;
+}
+
+.retro-footer {
+  background-color: #222;
+  padding: 20px;
+}
+
+.heart {
+  color: #e74c3c;
+}
