@@ -1,4 +1,26 @@
 // Hier worden al de const gemaakt van de items/documents die er gemaakt worden//
+// Function to check if the user has accepted the cookie
+function checkCookie() {
+    const cookieAccepted = localStorage.getItem('cookieAccepted');
+    if (!cookieAccepted) {
+        // Show the cookie pop-up
+        const cookiePopup = document.querySelector('.cookie-popup');
+        cookiePopup.style.display = 'block';
+    }
+}
+
+// Function to accept the cookie
+function acceptCookie() {
+    // Set the cookieAccepted flag in localStorage
+    localStorage.setItem('cookieAccepted', true);
+    
+    // Hide the cookie pop-up
+    const cookiePopup = document.querySelector('.cookie-popup');
+    cookiePopup.style.display = 'none';
+}
+
+// Call the checkCookie function when the page loads
+document.addEventListener('DOMContentLoaded', checkCookie);
 const pizza = document.querySelector("#pizza");
 const autoClick = document.querySelector("#auto-click");
 const autoClickTextPrice = document.querySelector("#auto-click .price span");

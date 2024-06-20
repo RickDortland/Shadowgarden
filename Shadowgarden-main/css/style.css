@@ -449,3 +449,47 @@ body::-webkit-scrollbar-thumb {
 .solar #solarIcon {
   display: block;
 }
+/* Cookie pop-up */
+.cookie-popup {
+  position: fixed;
+  bottom: 20px;
+  left: 20px;
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 300px;
+  z-index: 9999;
+}
+
+.cookie-popup-text {
+  font-size: 14px;
+  color: #333;
+}
+
+.cookie-popup-button {
+  background-color: #4caf50;
+  color: #fff;
+  padding: 8px 16px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 14px;
+}
+
+.cookie-popup-button:hover {
+  background-color: #45a049;
+}
+
+.cookie-popup-close {
+  color: #999;
+  font-size: 20px;
+  cursor: pointer;
+}
+
+.cookie-popup-close:hover {
+  color: #666;
+}
